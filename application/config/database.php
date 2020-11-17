@@ -75,15 +75,15 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> 'iderp',
-	'hostname' => 'Driver={SQL Server Native Client 10.0};Server=192.168.0.202;Database=iderp2014;',
+	'hostname' => 'Driver={SQL Server Native Client 10.0};Server=192.168.0.202;Database=iderp;',
 	'username' => 'user',
 	'password' => '123456',
-	'database' => 'iderp2014',
+	'database' => 'iderp',
 	'dbdriver' => 'odbc',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
+	'cache_on' => TRUE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',

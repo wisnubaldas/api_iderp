@@ -22,27 +22,32 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->load->library('Doctrine');
+		$this->load->model('TesModel');
 	}
 	public function index()
 	{
-		$this->load->library('Doctrine');
-		$em = $this->doctrine->em;
+		// include_once './application/models/TesModel.php';
+		// $em = $this->doctrine->getEntityManager();
+		// var_dump($em);
+		// $this->TesModel->get_entry();
+// 		$this->load->library('Doctrine');
+// 		$em = $this->doctrine->em;
 
- //    	$em = $this->doctrine->em;
-	// // do Doctrine stuff
-	    $productRepository = $em->getRepository('ABS102S1');
-	    $products = $productRepository->findAll();
-	    foreach ($products as $product):
-	        echo sprintf("-%s\n", $product->getName());
-	    endforeach;
+//  //    	$em = $this->doctrine->em;
+// 	// // do Doctrine stuff
+// 	    $productRepository = $em->getRepository('ABS102S1');
+// 	    $products = $productRepository->findAll();
+// 	    foreach ($products as $product):
+// 	        echo sprintf("-%s\n", $product->getName());
+// 	    endforeach;
 
 		// $this->load->database();
-		// $query = $this->db->query('SELECT TOP 10 * FROM ABS102S1');
+		$query = $this->db->query('SELECT TOP 20 * FROM ABS102S1');
 
-		// foreach ($query->result() as $row)
-		// {
-		//         print_r($row);
-		// }
+		foreach ($query->result() as $row)
+		{
+		        print_r($row);
+		}
 		// $this->load->view('welcome_message');
 	}
 

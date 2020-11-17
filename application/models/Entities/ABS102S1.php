@@ -1,8 +1,9 @@
 <?php
-// src/Product.php
+// entities/ABS102S1.php
 /**
- * @Entity @Table(name="products")
+ * @Entity @Table(name="ABS102S1")
  **/
+use Doctrine\ORM\Mapping as ORM;
 class ABS102S1
 {
     /** @Id @Column(type="integer") @GeneratedValue **/
